@@ -5,3 +5,4 @@ scikit-learn>=1.3
 joblib>=1.3
 tensorflow>=2.15
 gunicorn
+flask-cors
