@@ -265,7 +265,7 @@ header.scrolled{background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(18
 const API_BASE=String(import.meta.env?.VITE_API_BASE_URL ||window.CARDIOAI_API_BASE ||"https://cardioai-heart-prediction.onrender.com").replace(/\/+$/, "");
 const CONFIG = {
   API_URL: API_BASE+"/api/predict",  // POST endpoint of the Flask ANN API
-  TIMEOUT_MS: 20000,
+  TIMEOUT_MS: 120000,
   ENCODING: "uci",             // "uci" = processed.cleveland.data codes; "kaggle" = common 0-indexed CSV version
   CLASS_LABELS: {},            // e.g. {0:"No heart disease", 1:"Heart disease"} — only set after confirming your dataset's target coding
   PROB_NOTE: "Model output returned by the ANN. It is not a clinically validated risk percentage and not the probability that this person has heart disease."
