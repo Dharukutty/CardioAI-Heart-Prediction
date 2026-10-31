@@ -262,7 +262,7 @@ header.scrolled{background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(18
 <script type="module">
 /* ============ CONFIG — edit to match your Flask backend and training data ============ */
 /* API base URL: Vite env var VITE_API_BASE_URL (build-time) -> optional window.CARDIOAI_API_BASE -> local Flask default */
-const API_BASE=String(import.meta.env?.VITE_API_BASE_URL||window.CARDIOAI_API_BASE||(location.port==="5000"&&/^https?:$/.test(location.protocol)?location.origin:"http://127.0.0.1:5000")).replace(/\/+$/,"");
+const API_BASE=String(import.meta.env?.VITE_API_BASE_URL ||window.CARDIOAI_API_BASE ||location.origin).replace(/\/+$/, "");
 const CONFIG = {
   API_URL: API_BASE+"/api/predict",  // POST endpoint of the Flask ANN API
   TIMEOUT_MS: 20000,
